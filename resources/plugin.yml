@@ -1,0 +1,6 @@
+name: RenewableDragonEggs
+main: io.github.rypofalem.renewabledragoneggs.RenewableDragonEggPlugin
+version: 1.0
+website: rypofalem.github.io
+author: RypoFalem
+description: When the enddragon dies, place a dragon egg on the highest bedrock at 0,0
