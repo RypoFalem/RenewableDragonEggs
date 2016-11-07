@@ -17,7 +17,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class RenewableDragonEggPlugin extends JavaPlugin implements Listener {
 	static final int INITIALDELAY = 5*20;
-	static final int PERIODDELAY =  10;
+	static final int PERIODDELAY =  0; //needs to run each tick to prevent exploit
 	static final int GIVEUPTIME = 60 * 20;
 	
 	@Override
