@@ -48,7 +48,7 @@ public class RenewableDragonEggPlugin extends JavaPlugin implements Listener {
 		
 		@Override
 		public void run(){
-			if(++count * PERIODDELAY >= GIVEUPTIME ){ //dragon is taking too long to die, something probably went wrong
+			if(++count * (PERIODDELAY+1) >= GIVEUPTIME ){ //dragon is taking too long to die, something probably went wrong
 				this.cancel();
 				return;
 			}
