@@ -63,7 +63,11 @@ public class RenewableDragonEggPlugin extends JavaPlugin implements Listener {
 				if(dragonEgg.getType() == Material.BEDROCK){ //Portal found, search up for air block
 					while(dragonEgg.getY() < 255){
 						dragonEgg = dragonEgg.getRelative(BlockFace.UP);
-						if(dragonEgg.getType() == Material.DRAGON_EGG) return; //there is already an egg here, almost always from initial kill
+						if(dragonEgg.getType() == Material.DRAGON_EGG){
+							//there is already an egg here, almost always from initial kill
+							this.cancel();
+							return;
+						}
 						if(dragonEgg.getType() == Material.AIR){
 							dragonEgg.setType(Material.DRAGON_EGG);
 							break;
