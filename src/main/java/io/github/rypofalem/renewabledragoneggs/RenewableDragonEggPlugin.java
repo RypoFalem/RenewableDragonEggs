@@ -14,11 +14,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 public class RenewableDragonEggPlugin extends JavaPlugin implements Listener {
 	static final int INITIALDELAY = 5*20;
 	static final int PERIODDELAY =  0; //needs to run each tick to prevent exploit
 	static final int GIVEUPTIME = 60 * 20;
+	public BukkitTask  bukkitTask;
 	
 	@Override
 	 public void onEnable(){
@@ -34,6 +36,7 @@ public class RenewableDragonEggPlugin extends JavaPlugin implements Listener {
 		} catch (Exception e){
 			e.printStackTrace(); //expertly handled
 		}
+
 	}
 	
 	class EggTask extends BukkitRunnable{
